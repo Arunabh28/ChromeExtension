@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Application Walkthrough with network recorder",
+    "version":"1.0.0",
+    "description": "A side panel that records network activities.",
+    "icons":{
+        "48":"images/icon-48.png",
+        "128":"images/icon-128.png"
+    },
+    "minimum_chrome_version":"116",
+    "permissions":["tabs","activetab","sidePanel","debugger"],
+    "side_panel":{"default_path":"Page.html"},
+    "host_permissions":[
+        "all_urls"
+    ]
+}

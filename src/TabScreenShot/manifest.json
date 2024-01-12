@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Screenshot of active tab",
+    "version":"1.0.0",
+    "description": "A side panel that takes screenshot of the tab.",
+    "icons":{
+        "48":"images/icon-48.png",
+        "128":"images/icon-128.png"
+    },
+    "minimum_chrome_version":"116",
+    "permissions":["tabs","sidePanel"],
+    "side_panel":{
+        "default_path":"Page.html"
+        
+        
+    },
+    "host_permissions":[
+        "<all_urls>"
+    ]
+}
