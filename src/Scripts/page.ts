@@ -20,12 +20,12 @@ btnSnapIt.addEventListener("click",async(ev)=>{
                 let domElement:ICaptureScreenComponent=<ICaptureScreenComponent> document.createElement("screen-shot");
                 //domElement.setAttribute("dataUrl",captureResult.dataUrl);
                 domElement.dataUrl=captureResult.dataUrl;
-                placeholder.appendChild(domElement);
+                placeholder?.appendChild(domElement);
         },
         (rejectedReason:CaptureScreenResult)=>{
             let domElement= document.createElement("screen-shot");
             domElement.setAttribute("data_obj",JSON.stringify(rejectedReason));
-            placeholder.appendChild(domElement);
+            placeholder?.appendChild(domElement);
         }
         );
 

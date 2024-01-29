@@ -1,5 +1,5 @@
 (() => {
-  // scripts/ChromeHelper/ChromeCommands.ts
+  // src/scripts/ChromeHelper/ChromeCommands.ts
   var ChromeCommands = class {
     activeTabInfo;
     constructor() {
@@ -38,7 +38,7 @@
     }
   };
 
-  // scripts/TabScreenShot/CaptureScreen.ts
+  // src/scripts/TabScreenShot/CaptureScreen.ts
   var CaptureScreen = class {
     constructor() {
     }
@@ -65,7 +65,7 @@
   };
   var CaptureScreen_default = CaptureScreen;
 
-  // scripts/TabScreenShot/captureScreenComponent.ts
+  // src/scripts/TabScreenShot/captureScreenComponent.ts
   var CaptureScreenComponent_DATA_URL_Atrribute = "dataUrl";
   var CaptureScreenComponent_Error_Atrribute = "errorMessage";
   var CaptureScreenComponent = class extends HTMLElement {
@@ -90,11 +90,11 @@
     }
     data_obj;
     getTemplate() {
-      return `"<div>
+      return `<div>
         <h3>Screenshot</h3>
         <img src="${this._dataUrl}" alt="Screenshot" class="responsive-Image"/>
         <small style='color:red;'>${this._errorMsg}</small>
-        </div>"`;
+        </div>`;
     }
     constructor() {
       super();
@@ -111,7 +111,7 @@
   };
   var captureScreenComponent_default = CaptureScreenComponent;
 
-  // scripts/page.ts
+  // src/scripts/page.ts
   customElements.define("screen-shot", captureScreenComponent_default);
   var btnSnapIt = document.getElementById("btnCapture");
   var placeholder = document.getElementById("loggerDiv");
@@ -123,12 +123,12 @@
         (captureResult) => {
           let domElement = document.createElement("screen-shot");
           domElement.dataUrl = captureResult.dataUrl;
-          placeholder.appendChild(domElement);
+          placeholder?.appendChild(domElement);
         },
         (rejectedReason) => {
           let domElement = document.createElement("screen-shot");
           domElement.setAttribute("data_obj", JSON.stringify(rejectedReason));
-          placeholder.appendChild(domElement);
+          placeholder?.appendChild(domElement);
         }
       );
     } catch (err) {

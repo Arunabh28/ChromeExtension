@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "noImplicitAny": false,
+      "noEmitOnError": true,
+      "removeComments": true,
+      "sourceMap": true,
+      "target":"ESNext",
+      "lib": ["ES6","DOM"],
+      "outDir": "./dist/scripts/"
+    },
+    "include": [
+      "src/scripts/**/*"
+    ]
+  }

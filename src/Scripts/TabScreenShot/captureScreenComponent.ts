@@ -26,11 +26,11 @@ class CaptureScreenComponent extends HTMLElement{
     }
     data_obj:CaptureScreenResult
     private getTemplate(){
-        return `"<div>
+        return `<div>
         <h3>Screenshot</h3>
         <img src="${this._dataUrl}" alt="Screenshot" class="responsive-Image"/>
         <small style='color:red;'>${this._errorMsg}</small>
-        </div>"`
+        </div>`;
     }
     constructor(){
         super();  

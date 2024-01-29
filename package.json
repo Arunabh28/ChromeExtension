@@ -1,0 +1,36 @@
+{
+  "name": "my-chrome-extension",
+  "version": "1.0.0",
+  "description": "A collection of chrome extensions",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild ./src/scripts/page.ts --bundle --outdir=./dist/scripts  && npm run copyFile",
+    "clean": "tsc --build --clean && rimraf dist/",
+    "copyFile": "copy-and-watch ./src/*.html ./src/manifest.json  ./src/**/{fonts,images}/* ./dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arunabh28/ChromeExtension.git"
+  },
+  "keywords": [
+    "Chrome",
+    "Extensions",
+    "Screen Capture",
+    "Network Log"
+  ],
+  "author": "Arunabh Baruah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Arunabh28/ChromeExtension/issues"
+  },
+  "homepage": "https://github.com/Arunabh28/ChromeExtension#readme",
+  "dependencies": {
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.256",
+    "copy-and-watch": "^0.1.6",
+    "esbuild": "0.19.11",
+    "rimraf": "^5.0.5"
+  }
+}
